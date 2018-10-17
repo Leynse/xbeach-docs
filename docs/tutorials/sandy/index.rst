@@ -24,28 +24,25 @@ designed to describe the different storm regimes described by
 Sallenger (2000) and is used in as a tool to model the impact of
 Hurricane Sandy on the New Jersey coast.
 
-.. _fig-photos1:
-   :align: center
+.. image:: images/image2.jpeg
+   :width: 200px
 
-   .. image:: images/image2.jpeg
-      :width: 200px
+.. image:: images/image3.jpeg
+   :width: 200px
 
-   .. image:: images/image3.jpeg
-      :width: 200px
-
-.. _fig-photos2:
-   :align: center
            
-   .. image:: images/image4.jpg
-      :width: 200px
+.. image:: images/image4.jpg
+   :width: 200px
               
-   .. image:: images/image5.jpg
-      :width: 200px
+.. image:: images/image5.jpg
+   :width: 200px
 
 .. _fig-photos:
 
 .. figure:: images/blank.jpg
-   :width: 0px
+   :width: 1px
+   :align: center
+
 
    Upper pictures show characteristic examples of damage which
    occurred during Sandy (Lopez-Feliciano, 2014). Bottom pictures
