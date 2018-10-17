@@ -76,14 +76,14 @@ Coordinate system
 XBeach uses a coordinate system where the computational x-axis is
 always oriented towards the coast, approximately perpendicular to the
 coastline, and the y-axis is alongshore, see
-:numref:`fig-coordsys-rect` and :numref:`fig-coordsys-curvi`.  This
+`fig-coordsys-rect` and `fig-coordsys-curvi`.  This
 coordinate system is defined in world coordinates. The grid size in x-
 and y-direction may be variable but the grid must be curvilinear.
 Alternatively, in case of a rectangular grid (a special case of a
 curvilinear grid) the user can provide coordinates in a local
 coordinate system that is oriented with respect to world coordinates
 (xw, yw) through an origin (xori, yori) and an orientation (alfa) as
-depicted in :numref:`fig-coordsys-rect`. The orientation is defined
+depicted in `fig-coordsys-rect`. The orientation is defined
 counter-clockwise w.r.t. the xw-axis (East).
 
 .. _fig-coordsys-rect:
@@ -225,7 +225,7 @@ these boundaries.
 .. _stationary_examples:
 
 .. figure:: images/blank.jpg
-   :width: 0px
+   :width: 1px
            
    Root-mean square wave height (left panels) and final bathymetry
    (right panels) for an offshore breakwater case (upper panels) and
@@ -705,7 +705,7 @@ cases.
 For the monochromatic case:
 
 .. math::
-   :label: orbital-velocity-monochomatic
+   :label: orbital-velocity-monochromatic
 
    \left\langle \left|\tilde{u}\right|^{3} \right\rangle =1.20\left\langle \left|\tilde{u}\right|^{2} \right\rangle ^{3/2} =1.20\left(\frac{1}{2} u_{orb}^{2} \right)^{3/2} =0.42u_{orb}^{3}
 
@@ -1241,7 +1241,7 @@ In XBeach-G, the bed shear stress is described in terms of a drag and an inertia
 .. math::
    :label: tau-drag-and-inertia
            
-   \tau_{b}=\tau_{bd}+\tau_{bi}\label{eq:bed_friction_total}
+   \tau_{b}=\tau_{bd}+\tau_{bi}
 
 where :math:`\tau_{bd}` and :math:`\tau_{bi}` are bed shear stress terms due to drag and inertia, respectively. Note that the inertia component of the bed shear stress does not represent the actual inertia of the particles, but refers to the force on particles in the bed due to pressure gradients, as well as due to the disturbance of the accelerating flow, following potential flow theory.
 
@@ -1637,7 +1637,7 @@ expense of numerical accuracy.
 Groundwater flow in the swash and surf zone has been shown to be
 non-hydrostatic (e.g., :cite:`Li2000`; :cite:`Lee2007a`). In order to
 capture this, it may be necessary in certain cases to reject the
-Dupuit–Forchheimer assumption of hydrostatic groundwater pressure.
+Dupuit-Forchheimer assumption of hydrostatic groundwater pressure.
 
 In the non-hydrostatic approach, the groundwater head is not assumed to
 be constant in the vertical. Since XBeach is depth-averaged, the model
@@ -2302,7 +2302,7 @@ In XBeach-G, bed slope effects on sediment transport are included by changing th
 .. math::
    :label:
    
-   \theta'=\theta\cos\beta\left(1\pm\frac{\tan\beta}{\tan\phi}\right)\label{eq:Fredsoe_bedslope}
+   \theta'=\theta\cos\beta\left(1\pm\frac{\tan\beta}{\tan\phi}\right)
 
 where :math:`beta` is the local angle of the bed, :math:`phi` is the angle of repose of the sediment (approximately 30-40), and the right-hand term is less than 1 for up-slope transport, and greater than 1 for down-slope transport. 
 
@@ -2725,7 +2725,7 @@ minimum of reflection. It is therefore only useful for 1D (flume like)
 simulations.
 
 With option :par:`front` = *abs2d* (default value) the formulation by :cite:`VanDongeren1997` is activated which in turn is based on
-:cite:`Verboom1981` and is based on the ‘Method of Characteristics’.
+:cite:`Verboom1981` and is based on the Method of Characteristics.
 This boundary condition allows for obliquely-incident and
 obliquely-reflected waves to pass through the boundary. It is possible
 to account for situations with boundary-perpendicular and
@@ -3297,7 +3297,7 @@ An example of a 2D SWAN spectrum is given below:
                 
    SWAN 1 Swan standard spectral file
    $ Data produced by SWAN version 40.51
-   $ Project:’projname’ ; run number:’runnum’
+   $ Project:projname ; run number:runnum
    LOCATIONS locations in x-y-space
    1 number of locations
    22222.22 0.00
@@ -5005,7 +5005,7 @@ Bed friction and viscosity
 The parameters listed in the table below involve the settings for bed
 friction and viscosity influencing the flow in XBeach. The bed friction
 is influenced by the dimensionless friction coefficient :par:`cf` or other
-formulation like the dimensional ChÃ©zy or Manning. The bed friction
+formulation like the dimensional Chézy or Manning. The bed friction
 formulation applied needs to be determined with the keyword
 :par:`bedfriction`. It is possible both to define one value (keyword:
 :par:`bedfriccoef`) or to apply, spatially varying values for the bed
