@@ -76,14 +76,14 @@ Coordinate system
 XBeach uses a coordinate system where the computational x-axis is
 always oriented towards the coast, approximately perpendicular to the
 coastline, and the y-axis is alongshore, see
-`fig-coordsys-rect` and `fig-coordsys-curvi`.  This
+:numref:`fig-coordsys-rect` and :numref:`fig-coordsys-curvi`.  This
 coordinate system is defined in world coordinates. The grid size in x-
 and y-direction may be variable but the grid must be curvilinear.
 Alternatively, in case of a rectangular grid (a special case of a
 curvilinear grid) the user can provide coordinates in a local
 coordinate system that is oriented with respect to world coordinates
 (xw, yw) through an origin (xori, yori) and an orientation (alfa) as
-depicted in `fig-coordsys-rect`. The orientation is defined
+depicted in :numref:`fig-coordsys-rect`. The orientation is defined
 counter-clockwise w.r.t. the xw-axis (East).
 
 .. _fig-coordsys-rect:
