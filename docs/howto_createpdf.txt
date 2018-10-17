@@ -1,12 +1,45 @@
-Basics
-------
+How to make a PDF version of the online XBeach manual
 
-* Run "make latex"
-* Go to _build/latex
-* Run "pdflatex -interaction=nonstopmode XBeach" 3 times to fix all references
+v1.0 Leijnse Oct-18
 
-Troubleshoot
-------------
+%% 0. Software
+a) Make a local clone of the Github repository using TortoiseGIT (https://github.com/openearth/xbeach-docs)
+b) Install Anaconda 
+c) Make a new environment 'XBeach_docs' in the Anaconda navigator, Python 3.7 seems to work
+
+%% 1. Installing packages
+a) Open the Anaconda prompt
+b) Open environment by typing: activate XBeach_docs
+c) Update pip: python -m pip install --upgrade pip
+d) Install Sphinx: pip install Sphinx
+e) pip install sphinxcontrib-bibtex
+f) pip install git+git://github.com/openearth/sphinxcontrib-partable#egg=sphinxcontrib_partable
+g) pip install git+git://github.com/openearth/sphinx-fortran-extension#egg=sphinxfortran
+h) pip install breathe
+i) pip install sphinx_rtd_theme
+
+%% 2. Making latex files
+a) cd to location where the GIThub clone is made, e.g.: cd c:\Users\leijnse\Documents\XBeach_docs\xbeach-docs\docs\
+b) change the references from index to index_pdf in the conf.py file to use the index_pdf.rst file
+b) type: make latex
+c) when error regarding packages occur; try installing them again. 
+	When asked for sphinx.ext.pngmath and installing doesnot work; removing this line from the conf.py file under extensions
+d) If all went well the folder '_build/latex' is now created, cd to folder: cd _build/latex
+e) Make pdf: pdflatex -interaction=nonstopmode XBeach
+	run 3 times to fix all references
+f) If then this doesnt work; try making the pdf using a seperate editor (e.g. Miktex + Texstudio)
+
+Occuring problems: (if rendering stops at some point something has gone wrong, even if no error message is given. Then use a lates-editor like Texstudio to investigate possible errors)
+- for some reason adding a blank figure with width 0px when making a figure with subplots doesn't work (appears in tex-file as width=0)- then pdf won't render properly --> changing 0px to 1px works
+- double defined lables in one figure/equation/etc is not allowed
+- Special characters or words within quotes '' is not allowed
+
+
+%% 3. Via Readthedocs
+
+a) a pdf can alternatively be made automatically via Readthedocs, but often the XBeach manual is too big to render on this
+
+%% 4. Troubleshoot
 
 Most likely the above will result in latex errors. The most common are:
 
